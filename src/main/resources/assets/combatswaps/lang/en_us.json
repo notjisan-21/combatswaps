@@ -1,0 +1,16 @@
+{
+  "key.combatswaps.attribute_swap": "Attribute Swap",
+  "key.combatswaps.spear_swap": "Spear Swap",
+  "key.combatswaps.pearl_catch": "Pearl Catch",
+  "key.combatswaps.spear_mace": "Spear Mace",
+  "key.combatswaps.elytra_mace": "Elytra Mace",
+  "key.combatswaps.rocket_mace": "Rocket Mace",
+  "key.combatswaps.toggle_attribute_swap": "Toggle Attribute Swap",
+  "key.combatswaps.toggle_spear_swap": "Toggle Spear Swap",
+  "key.combatswaps.toggle_pearl_catch": "Toggle Pearl Catch",
+  "key.combatswaps.toggle_spear_mace": "Toggle Spear Mace",
+  "key.combatswaps.toggle_elytra_mace": "Toggle Elytra Mace",
+  "key.combatswaps.toggle_rocket_mace": "Toggle Rocket Mace",
+  "category.combatswaps.combat": "Combat Swaps",
+  "category.combatswaps.toggles": "Combat Swaps Toggles"
+}

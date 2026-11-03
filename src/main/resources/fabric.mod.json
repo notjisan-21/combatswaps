@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "combatswaps",
+  "version": "${version}",
+  "name": "CombatSwaps",
+  "description": "Client-side combat hotbar swap utilities for Minecraft 1.21.11",
+  "authors": [
+    "YourName"
+  ],
+  "contact": {
+    "homepage": "https://github.com/yourname/combatswaps",
+    "sources": "https://github.com/yourname/combatswaps",
+    "issues": "https://github.com/yourname/combatswaps/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/combatswaps/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.example.combatswaps.CombatSwapsClient"
+    ],
+    "modmenu": [
+      "com.example.combatswaps.config.CombatSwapsModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "combatswaps.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "fabric-api": ">=0.141.6",
+    "minecraft": "1.21.11",
+    "java": ">=21"
+  },
+  "suggests": {
+    "modmenu": ">=11.2.0"
+  }
+}

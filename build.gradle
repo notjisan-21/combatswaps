@@ -1,0 +1,57 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version '1.15'
+    id 'java'
+}
+
+group = 'com.example.combatswaps'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabricmc.net' }
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.21.11'
+    mappings 'net.fabricmc:yarn:1.21.11+build.1:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.18.4'
+    modApi 'net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11'
+    include 'net.fabricmc.fabric-api:fabric-api:0.141.6+1.21.11'
+
+    // Optional ModMenu integration
+    modRuntime 'me.shedaniel:modmenu:11.2.0+1.21.11'
+}
+
+loom {
+    // Minecraft 1.21.11 is still obfuscated, use remap plugin
+    // No additional config needed for standard client mod
+}
+
+tasks.named('jar') {
+    manifest {
+        attributes(
+            'Implementation-Title': 'CombatSwaps',
+            'Implementation-Version': project.version,
+            'Implementation-Vendor': 'com.example.combatswaps',
+            'Built-By': System.getProperty('user.name'),
+            'Built-Date': new Date().format('yyyy-MM-dd')
+        )
+    }
+    // Include ModMenu config if present
+    from('src/main/resources/modmenu.json') {
+        include 'modmenu.json'
+    }
+}
+
+tasks.named('remapJar') {
+    dependsOn tasks.named('jar')
+}
+
+tasks.named('build') {
+    dependsOn tasks.named('remapJar')
+}

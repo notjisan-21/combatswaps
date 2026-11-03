@@ -1,0 +1,18 @@
+{
+  "modid": "combatswaps",
+  "name": "CombatSwaps",
+  "description": "Client-side combat hotbar swap utilities",
+  "version": "${version}",
+  "authors": ["YourName"],
+  "contact": {
+    "homepage": "https://github.com/yourname/combatswaps",
+    "issues": "https://github.com/yourname/combatswaps/issues"
+  },
+  "entrypoints": {
+    "modmenu": [
+      "com.example.combatswaps.config.CombatSwapsModMenuIntegration"
+    ]
+  },
+  "parent": "",
+  "icon": "assets/combatswaps/icon.png"
+}
