@@ -21,11 +21,10 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Setup and Run Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          arguments: build
 
       - name: Upload JAR Artifact
         uses: actions/upload-artifact@v4
