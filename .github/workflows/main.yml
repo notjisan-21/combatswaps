@@ -18,6 +18,8 @@ jobs:
           distribution: 'temurin'
           cache: 'gradle'
       - uses: gradle/actions/setup-gradle@v4
+        with:
+          validate-wrappers: false 
       - run: chmod +x ./gradlew
       - run: ./gradlew build --no-daemon
       - uses: actions/upload-artifact@v4
