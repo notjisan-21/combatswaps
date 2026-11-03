@@ -1,0 +1,6 @@
+on:
+  push:
+    branches: ["*"]  # triggers on ALL branches
+  pull_request:
+    branches: ["*"]
+  workflow_dispatch:
